@@ -41,7 +41,7 @@ We are required to type `/challenge/run` in the command prompt.On sumbitting the
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `/challenge/run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
 Correct!!!
@@ -69,7 +69,7 @@ The  challenge asks you to change your current working directory to `cd` and the
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `/challenge/run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~program-and-absolute-paths:~$ /challenge/run
 Correct!!!
@@ -100,7 +100,7 @@ The challenge asks to first check which directory in the filesystem we're curren
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `/challenge/run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~position-elsewhere:/$ pwd
 /
@@ -132,7 +132,7 @@ The challenge required me to change the directory using `cd` to `/usr/share/doc/
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `/challenge/run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~position-yet-elsewhere:/usr/bin$ cd /usr/share/doc/fontconfig
 hacker@paths~position-yet-elsewhere:/usr/share/doc/fontconfig$ /challenge/run
@@ -162,7 +162,7 @@ In this challenge instead of running the program with its full absolute path (/c
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `challenge/run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~implicit-relative-paths-from-:/$ cd /
 hacker@paths~implicit-relative-paths-from-:/$ challenge/run
@@ -196,7 +196,7 @@ This challenge asks to invoke the `./challenge/run` comamnd to retrieve the flag
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `./challenge/run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~explicit-relative-paths-from-:~$ cd /
 hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run
@@ -229,7 +229,7 @@ This challenge required us to print `./run` command in the prompt to collect the
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `./run` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~implicit-relative-path:/challenge$ ./run
 Correct!!!
@@ -257,7 +257,7 @@ This challenge required us to write a copy of the flag to the file we specify as
 root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
  Connected!
  ```
-2. Now the shell is connected to dojo. Now on typing `hello` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+2. Now the shell is connected to dojo. Now on typing `cat ~/f` and clicking on Enter, I get the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
 ```bash
 hacker@paths~home-sweet-home:~$ /challenge/run ~/f
 Writing the file to /home/hacker/f!
