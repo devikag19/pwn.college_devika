@@ -299,6 +299,7 @@ Connected!
 ```
 
 ## Refernces
+-
 
 # Making directories
 In this challenge we used the command `mkdir` to create new directories and then run `/challenge/check` to capture the flag. On sumbitting the flag, challenge is completed.
@@ -328,3 +329,93 @@ pwn.college{UIYfG9Q42LYBSb6Prn1Peyz-kFO.QXxMDO0wSNxEzNzEzW}
 ## Refernces
 -
 
+# Finding files 
+The flag is hidden in a random directory on the filesystem. It has to be found using 'find / - name flag'
+**Flag:** `pwn.college{kjvGMwx48-h__gMWk97r0wlH9R7.QXyMDO0wSNxEzNzEzW}`
+
+1. I connected the dojo host using SSH command.
+```bash
+root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
+Connected!
+```
+
+2. Now the shell is connected to dojo. Now, I got the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+
+```bash
+hacker@commands~finding-files:~$ find / -name flag
+find: ‘/root’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/tmp/tmp.4mK6TfTSUV’: Permission denied
+/usr/local/lib/python3.8/dist-packages/pwnlib/flag
+/usr/share/racket/pkgs/srfi-lib/srfi/40/flag
+/home/hacker/flag
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/log/apache2’: Permission denied
+find: ‘/var/log/mysql’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+find: ‘/var/lib/mysql-keyring’: Permission denied
+find: ‘/var/lib/php/sessions’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/mysql-files’: Permission denied
+find: ‘/var/lib/mysql’: Permission denied
+find: ‘/run/mysqld’: Permission denied
+find: ‘/run/sudo’: Permission denied
+find: ‘/proc/tty/driver’: Permission denied
+find: ‘/proc/1/task/1/fd’: Permission denied
+find: ‘/proc/1/task/1/fdinfo’: Permission denied
+find: ‘/proc/1/task/1/ns’: Permission denied
+find: ‘/proc/1/fd’: Permission denied
+find: ‘/proc/1/map_files’: Permission denied
+find: ‘/proc/1/fdinfo’: Permission denied
+find: ‘/proc/1/ns’: Permission denied
+find: ‘/proc/7/task/7/fd’: Permission denied
+find: ‘/proc/7/task/7/fdinfo’: Permission denied
+find: ‘/proc/7/task/7/ns’: Permission denied
+find: ‘/proc/7/fd’: Permission denied
+find: ‘/proc/7/map_files’: Permission denied
+find: ‘/proc/7/fdinfo’: Permission denied
+find: ‘/proc/7/ns’: Permission denied
+/opt/pwndbg/.venv/lib/python3.8/site-packages/pwnlib/flag
+/nix/store/7ns27apnvn4qj4q5c82x0z1lzixrz47p-radare2-5.9.8/share/radare2/5.9.8/flag
+/nix/store/5z3sjp9r463i3siif58hq5wj5jmy5m98-python3.12-pwntools-4.13.1/lib/python3.12/site-packages/pwnlib/flag
+/nix/store/5n5lp1m8gilgrsriv1f2z0jdjk50ypcn-rizin-0.7.3/share/rizin/flag
+/nix/store/h88mxp2mbgyj06vypwmqpy05idhwimnp-python3.13-pwntools-4.14.1/lib/python3.13/site-packages/pwnlib/flag
+/nix/store/s8b49lb0pqwvw0c6kgjbxdwxcv2bp0x4-radare2-5.9.8/share/radare2/5.9.8/flag
+/nix/store/bnlabj2vsbljhp597ir29l51nrqhm89w-rizin-0.7.4/share/rizin/flag
+/nix/store/1hyxipvwpdpcxw90l5pq1nvd6s6jdi5m-python3.12-pwntools-4.14.1/lib/python3.12/site-packages/pwnlib/flag
+/nix/store/5qz6hgb1qzpvjrsw20wyiylx5zw8b9bk-pwntools-4.14.0/lib/python3.13/site-packages/pwnlib/flag
+hacker@commands~finding-files:~$ cat /usr/share/racket/pkgs/srfi-lib/srfi/40/flag
+pwn.college{kjvGMwx48-h__gMWk97r0wlH9R7.QXyMDO0wSNxEzNzEzW}
+```
+
+## What i learned 
+1. To search the whole filesystem, find / -name 'thing to be searched' is used.
+2. When specifying the search location, find 'directory to be searched' is used, if search loc is not specified, it searches in the current working directory by default.
+
+
+# linking files 
+The flag is hidden in a random directory on the filesystem. It has to be found using 'find / - name flag'
+**Flag:** `pwn.college{oN81kEI6lWrvXTtVwZd3MMW6b6a.QX5ETN1wSNxEzNzEzW}`
+
+1. I connected the dojo host using SSH command.
+```bash
+root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
+Connected!
+```
+
+2. Now the shell is connected to dojo. Now, I got the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+
+```bash
+hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag
+ln: failed to create symbolic link '/home/hacker/not-the-flag': File exists
+hacker@commands~linking-files:~$ :
+hacker@commands~linking-files:~$ /challenge/catflag
+About to read out the /home/hacker/not-the-flag file!
+pwn.college{oN81kEI6lWrvXTtVwZd3MMW6b6a.QX5ETN1wSNxEzNzEzW}
+```
+
+## What i learned 
+1. the use of symbolic links which are initiated with the `ln -s` command.
