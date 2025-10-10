@@ -236,7 +236,32 @@ pwn.college{UkRMrqkDZoHZ8M142AodJuNkLVi.0FN0EzNxwSNxEzNzEzW}
 ## What I learned 
 - The tab button can be used to autofill the path of the file.
 
-## Tab Completion on Commands
+
+# Multiple options for tab completion 
+This challenge requires us to use tab to complete commands for the suggested ones by the terminal.
+
+## My solution
+**Flag**  `pwn.college{4LxfmAfH10NHW_oea5B7waSVClb.0lN0EzNxwSNxEzNzEzW}`
+
+1. I connected the dojo host using SSH command.
+```bash
+root@LAPTOP-IDCKVPOM:~# ssh  -i ./key hacker@dojo.pwn.college
+Connected!
+```
+
+2. Now the shell is connected to dojo. Now, I got the flag that I can submit on [pwn.college](https://pwn.college/linux-luminarium/hello/) to complete the challenge.
+
+```bash
+hacker@globbing~multiple-options-for-tab-completion:~$ cat /challenge/files/
+cat: /challenge/files/: Is a directory
+hacker@globbing~multiple-options-for-tab-completion:~$ cat /challenge/files/pwncollege-flag
+pwn.college{4LxfmAfH10NHW_oea5B7waSVClb.0lN0EzNxwSNxEzNzEzW}
+```
+
+## What i learned 
+The challenge taught me on how to use the tab to complete the commands to get through them easier.
+
+# Tab Completion on Commands
 This challenge wants us to use tab-completion to read the flag.
 
 ## My solution
